@@ -1,0 +1,26 @@
+.idea/
+**/*.iml
+**/pkg/*
+**/target/*
+**/.DS_Store
+**/*.project
+**/*.settings/
+**/*.classpath
+**/catalina.base_IS_UNDEFINED
+**/src/main/webapp/WEB-INF/classes/*
+*.jar
+*.war
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.DS_Store
+
+logs
+log
+out
+
+http-client.env.json
+

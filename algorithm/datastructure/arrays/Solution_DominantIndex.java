@@ -1,5 +1,3 @@
-package algorithm.datastructure.arraysandstrings;
-
 import java.util.Arrays;
 
 /**
@@ -25,10 +23,12 @@ public class Solution_DominantIndex
         int i=0;
         for(int j=0;j<nums.length;j++)
         {
-            if(nums[j]!=max&&nums[j]!=0&&max/nums[j]<2)
+            if(nums[j]!=max&&nums[j]!=0&&max/nums[j]<2) {
                 return -1;
-            else if(nums[j]==max)
-                i=j;
+            }
+            else if(nums[j]==max) {
+                i = j;
+            }
         }
         return i;
     }
@@ -40,8 +40,9 @@ public class Solution_DominantIndex
      */
     public int dominantIndex_Two(int[] nums)
     {
-        if (nums.length < 2)
+        if (nums.length < 2) {
             return 0;
+        }
         int max1 = 0, max2 = 0, index = -1;
         for (int i = 0; i < nums.length; i++)
         {
@@ -50,8 +51,9 @@ public class Solution_DominantIndex
                 max2 = max1;
                 max1 = nums[i];
                 index = i;
-            } else if (nums[i] > max2)
+            } else if (nums[i] > max2) {
                 max2 = nums[i];
+            }
         }
         return max1 >= max2 * 2 ? index : -1;
     }

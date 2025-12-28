@@ -18,7 +18,7 @@ public class Solution_FindDiagonalOrder
      */
     public int[] findDiagonalOrder(int[][] matrix) {
 
-        if (matrix.length == 0) return new int[0];
+        if (matrix.length == 0) {return new int[0];}
         int m = matrix.length;// 待处理的矩阵有M行、N列
         int n = matrix[0].length;
         int[] result = new int[m * n];// 用来存放遍历的结果

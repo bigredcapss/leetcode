@@ -15,12 +15,15 @@ public class Solution_TwoSum
         int start = 0, end = numbers.length - 1;
         while (start < end) {
             int temp = numbers[start] + numbers[end];
-            if (temp == target)
+            if (temp == target) {
                 return new int[]{start + 1, end + 1};
-            else if (temp < target)
+            }
+            else if (temp < target) {
                 start++;
-            else
+            }
+            else {
                 end--;
+            }
         }
         return null;
     }

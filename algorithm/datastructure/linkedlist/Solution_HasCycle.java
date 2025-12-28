@@ -48,10 +48,10 @@ public class Solution_HasCycle
      * 空间复杂度：O(n)，最多需要保存链表的 n个节点；
      */
     public boolean hasCycle_Two(ListNode head) {
-        if (head == null) return false;//如果是空链表直接返回
+        if (head == null) {return false;}//如果是空链表直接返回
         Set<ListNode> nodeSet = new HashSet<>();//构造哈希表
         while (head.next != null) {//链表下一个不为空
-            if (nodeSet.contains(head)) return true;//哈希表包含该节点则存在环形链表
+            if (nodeSet.contains(head)) {return true;}//哈希表包含该节点则存在环形链表
             nodeSet.add(head);//加入节点
             head = head.next;//下移一位
         }

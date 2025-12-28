@@ -15,26 +15,26 @@ public class Solution_SpiralOrder
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> res = new LinkedList<>();
         if(matrix == null || matrix.length == 0)
-            return res;
+        {return res;}
 
         int left = 0, top = 0, right = matrix[0].length - 1, bottom = matrix.length - 1;
         while (true) {
 
-            for (int i = left; i <= right; i++) res.add(matrix[top][i]);
+            for (int i = left; i <= right; i++) {res.add(matrix[top][i]);}
             top++;
-            if (top > bottom) break;
+            if (top > bottom) {break;}
 
-            for (int i = top; i <= bottom; i++) res.add(matrix[i][right]);
+            for (int i = top; i <= bottom; i++) {res.add(matrix[i][right]);}
             right--;
-            if (left > right) break;
+            if (left > right) {break;}
 
-            for(int i = right; i >= left; i--) res.add(matrix[bottom][i]);
+            for(int i = right; i >= left; i--) {res.add(matrix[bottom][i]);}
             bottom--;
-            if(top > bottom) break;
+            if(top > bottom) {break;}
 
-            for(int i = bottom; i >= top; i--) res.add(matrix[i][left]);
+            for(int i = bottom; i >= top; i--) {res.add(matrix[i][left]);}
             left++;
-            if(left > right) break;
+            if(left > right) {break;}
         }
         return res;
     }

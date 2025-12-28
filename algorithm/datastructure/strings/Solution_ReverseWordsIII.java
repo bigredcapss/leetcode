@@ -15,10 +15,12 @@ public class Solution_ReverseWordsIII
         StringBuffer sb = new StringBuffer();
         for(int i = arr.length - 1; i >= 0; i--){
 
-            if(i > 0)
+            if(i > 0) {
                 sb.append(arr[i] + " ");
-            else
+            }
+            else {
                 sb.append(arr[i]);
+            }
         }
         return sb.toString();
     }

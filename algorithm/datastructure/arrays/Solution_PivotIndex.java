@@ -1,4 +1,4 @@
-package algorithm.datastructure.arraysandstrings;
+
 
 /**
  * @Description: #724 寻找数组的中心索引

@@ -10,11 +10,12 @@ public class Solution_StrStr
     public int strStr(String haystack, String needle) {
         int n1 = haystack.length();
         int n2 = needle.length();
-        if (n1 < n2) return -1;
-        else if ( n2 == 0) return 0;
+        if (n1 < n2) {return -1;}
+        else if ( n2 == 0) {return 0;}
         for (int i = 0; i < n1 - n2 + 1; i++ ){
-            if (haystack.substring(i, i+n2).equals(needle))
+            if (haystack.substring(i, i+n2).equals(needle)) {
                 return i;
+            }
         }
         return -1;
     }

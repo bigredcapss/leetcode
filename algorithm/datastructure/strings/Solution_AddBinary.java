@@ -18,15 +18,18 @@ public class Solution_AddBinary
 
         while (i >= 0 || j >= 0) {
             int sum = carry;
-            if (i >= 0)
+            if (i >= 0) {
                 sum += a.charAt(i--) - '0';//减'0'是为了转化为int
-            if (j >= 0)
+            }
+            if (j >= 0) {
                 sum += b.charAt(j--) - '0';
+            }
             sb.append(sum % 2); //sum%2得余数，即为该位最终数字
             carry = sum / 2; //carry记录是否进一位
         }
-        if (carry != 0)
+        if (carry != 0) {
             sb.append(carry); //将StringBuilder所得倒置后即为答案，转为String返回
+        }
         return sb.reverse().toString();
     }
 }

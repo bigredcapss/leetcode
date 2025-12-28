@@ -1,4 +1,3 @@
-package algorithm.datastructure.arraysandstrings;
 
 import org.junit.Test;
 
